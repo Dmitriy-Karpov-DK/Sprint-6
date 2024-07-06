@@ -24,3 +24,4 @@ class LocatorsBasePage:
     ORDER_BUTTON_HEADER_NEXT = (By.XPATH, "//div[@class='Home_FinishButton__1_cWm']//button")  # кнопка заказать в середине страницы
     LOGO_SCOOTER = (By.XPATH, "//a[@href='/']")  # логотип Самокат
     LOGO_YANDEX = (By.XPATH, "//a[@href='//yandex.ru']")  # логотип Яндекс
+    YANDEX_PAGE = (By.ID, 'LAYOUT_HEADER_APP_CONTAINER_MicroRoot')
