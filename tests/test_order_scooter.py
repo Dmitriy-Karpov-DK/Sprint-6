@@ -4,7 +4,7 @@ from pages.scooter_order_page import ScooterOrderPage
 from locators.base_page_locators import LocatorsBasePage
 from locators.scooter_order_page_locators import LocatorsScooterOrderPage
 from constants import Constants
-from conftest import driver
+
 
 class TestScooterOrder:
     order_data = [
