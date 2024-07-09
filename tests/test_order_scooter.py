@@ -4,6 +4,7 @@ from pages.scooter_order_page import ScooterOrderPage
 from locators.base_page_locators import LocatorsBasePage
 from locators.scooter_order_page_locators import LocatorsScooterOrderPage
 from constants import Constants
+from conftest import driver
 
 class TestScooterOrder:
     order_data = [
@@ -44,7 +45,7 @@ class TestScooterOrder:
         test_page.expectation(LocatorsScooterOrderPage.FORM_ORDER_PAGE)
         test_page.click_logo_scooter()
         test_page.expectation(LocatorsBasePage.BASE_TITLE_SCOOTER)
-        assert driver.current_url == Constants.URL
+        assert test_page.get_url() == Constants.URL
 
     @allure.title('клик по логотипу Яндекса')
     def test_click_logo_yandex_show_base_page_dzen(self, driver):
@@ -53,4 +54,4 @@ class TestScooterOrder:
         test_page.click_logo_yandex()
         test_page.switch_browser_window()
         test_page.expectation(LocatorsBasePage.YANDEX_PAGE)
-        assert driver.current_url == Constants.URL_DZEN
+        assert test_page.get_url() == Constants.URL_DZEN

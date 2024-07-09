@@ -47,3 +47,7 @@ class BasePage:
 
     def switch_browser_window(self):
         self.driver.switch_to.window(self.driver.window_handles[1])
+
+    def get_url(self):
+        get_url = self.driver.current_url
+        return get_url
